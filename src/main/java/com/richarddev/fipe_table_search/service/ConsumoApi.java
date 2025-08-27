@@ -1,5 +1,7 @@
 package com.richarddev.fipe_table_search.service;
 
+import com.fasterxml.jackson.databind.ObjectWriter;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -19,6 +21,8 @@ public class ConsumoApi {
         } catch (IOException | InterruptedException e) {
             throw new RuntimeException(e);
         }
+
+
 
         String json = response.body();
         return json;
